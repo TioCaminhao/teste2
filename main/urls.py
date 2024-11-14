@@ -1,5 +1,5 @@
 """
-URL configuration for aluno project.
+URL configuration for main project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.1/topics/http/urls/
@@ -18,7 +18,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
-from alunos.views import *
+from sasa.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),

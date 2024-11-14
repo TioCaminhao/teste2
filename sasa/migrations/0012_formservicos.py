@@ -7,7 +7,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('alunos', '0011_delete_formservicos'),
+        ('sasa', '0011_delete_formservicos'),
     ]
 
     operations = [
@@ -21,7 +21,7 @@ class Migration(migrations.Migration):
                 ('detalhes', models.TextField()),
                 ('data', models.DateField()),
                 ('aceita', models.BooleanField(default=None, null=True)),
-                ('servico', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='alunos.servicos')),
+                ('servico', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='sasa.servicos')),
             ],
         ),
     ]
