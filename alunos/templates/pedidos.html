@@ -1,0 +1,55 @@
+{% extends "base/base.html" %}
+{% block content %}
+  <header class="masthead">
+    <div class="container">
+        <div class="masthead-heading text-uppercase text-primary">Solicitações</div>
+        <div class="masthead-subheading">Verifique se sua solicitação foi deferida!</div>
+        <a class="btn btn-primary btn-xl text-uppercase" href="http://127.0.0.1:8000/">Voltar</a>
+  </header>
+  <div class="row">
+              <div>
+                <div class="card">
+                  <div class="card-header">
+                  <h4 class="text-center">Seus Pedidos</h4>
+                  </div>
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table class="table table-bordered table-md">
+                        <tr>
+                          <th>#</th>
+                          <th>Nome</th>
+                          <th>Serviço</th>
+                          <th>Detalhes</th>
+                          <th>Data Pedida</th>
+                          <th>Status</th>
+                          <th>Ação</th>
+                        </tr>
+                        {% for form in form %}
+                        <tr>
+                          <td>{{ forloop.counter }}</td>
+                          <td>{{ form.nome }} </td>
+                          <th>{{ form.servico }}</th>
+                          <th>{{ form.detalhes }}</th>
+                          <th>{{ form.data }}</th>
+                          <th>
+                            {% if form.aceita is None %}
+                              <p class="text-center text-primary">Pendente</p>
+                              <td class="center-block text-center">
+                                <a href="{% url 'editar' form.id %}" class="btn btn-primary">Editar</a>
+                                <a href="{% url 'deletar' form.id %}" class="btn btn-danger">Remover</a>
+                              </td>
+                            {% elif form.aceita %}
+                              <p class="text-center text-success">Deferida</p>
+                              <td class="center-block text-center"></td>
+                            {% else %}
+                              <p class="text-center text-danger">Negada</p>
+                              <td class="center-block text-center"></td>
+                            {% endif %}
+                          </th>                     
+                        </tr>
+                        {% endfor %}
+                      </table>
+                    </div>
+                  </div>
+              </div>
+{% endblock %}

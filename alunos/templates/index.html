@@ -1,0 +1,314 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+        <header class="masthead">
+            <div class="container">
+                <div class="masthead-subheading">Bem vindo(a)!</div>
+                <div class="masthead-heading text-uppercase text-primary">SASA</div>
+                <div class="masthead-subheading">Sistema de Agendamento de Serviços Automotivos</div>
+                <a class="btn btn-primary btn-xl text-uppercase" href="http://127.0.0.1:8000/contato/">Agendar Serviço</a>
+                <a class="btn btn-primary btn-xl text-uppercase" href="http://127.0.0.1:8000/pedidos/">Solicitações</a>
+            </div>
+        </header>
+        <section class="page-section" id="services">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Serviços</h2>
+                    <h3 class="section-subheading text-muted">Serviços disponíveis no momento. Tenha contato com o atendente e solicite o serviço.</h3>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Troca de óleo</h4>
+                        <p class="text-muted">substituição do óleo do motor, essencial para lubrificar as peças móveis do motor e evitar o superaquecimento. O serviço também pode incluir a troca do filtro de óleo.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Diagnóstico eletrônico</h4>
+                        <p class="text-muted">Utiliza equipamentos eletrônicos para identificar falhas no sistema de injeção eletrônica, transmissão automática, freios ABS, entre outros componentes gerenciados por centrais eletrônicas.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Reparos elétricos</h4>
+                        <p class="text-muted">Diagnóstico e conserto de problemas no sistema elétrico do veículo, como bateria, alternador, luzes, fiação e componentes eletrônicos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page-section bg-light" id="portfolio">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Veículos</h2>
+                    <h3 class="section-subheading text-muted">Veículos disponíveis</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 1-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="{% static 'assets/veiculos/Uno.jpg' %}" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Fiat Uno</div>
+                                <div class="portfolio-caption-subheading text-muted">1990</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <!-- Portfolio item 6-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="{% static 'assets/veiculos/Lancer.jpg' %}" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Mitsubishi Lancer Evolution</div>
+                                <div class="portfolio-caption-subheading text-muted">2023</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 3-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="{% static 'assets/veiculos/Corolla.png' %}" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Toyota Corolla Hybrid</div>
+                                <div class="portfolio-caption-subheading text-muted">2024</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <!-- Portfolio item 2-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="{% static 'assets/veiculos/Stepway.jpg' %}" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Renault Stepway</div>
+                                <div class="portfolio-caption-subheading text-muted">2023</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                        <!-- Portfolio item 4-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="{% static 'assets/veiculos/Fiesta.jpg' %}" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Ford Fiesta</div>
+                                <div class="portfolio-caption-subheading text-muted">2022</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                        <!-- Portfolio item 5-->
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="{% static 'assets/veiculos/Tracker.jpg' %}" alt="..." />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Chevrolet Tracker</div>
+                                <div class="portfolio-caption-subheading text-muted">2025</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <!-- About-->
+        
+        <!-- Team-->
+        
+        <!-- Contact-->
+        <!-- Footer-->
+        <!-- Portfolio Modals-->
+        <!-- Portfolio item 1 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="{% static 'assets/img/close-icon.svg' %}" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Renault Stepway</h2>
+                                    <p class="item-intro text-muted">2023</p>
+                                    <img class="img-fluid d-block mx-auto" src="{% static 'assets/veiculos/Stepway.jpg' %}" alt="..." />
+                                    <p>O Renault Stepway é um hatch compacto com design aventureiro, baseado no Renault Sandero, mas com visual robusto e suspensão elevada para enfrentar estradas urbanas e rurais. Ele oferece um bom espaço interno, conforto e praticidade, além de ser uma opção econômica em termos de consumo de combustível. Equipado com recursos básicos de tecnologia e segurança, o Stepway é ideal para quem busca um carro urbano com um toque esportivo e que se adapta bem a terrenos variados.</p>
+                                    
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Solicitar Test-Drive
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 2 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="{% static 'assets/img/close-icon.svg' %}" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Fiat Uno</h2>
+                                    <p class="item-intro text-muted">1990</p>
+                                    <img class="img-fluid d-block mx-auto" src="{% static 'assets/veiculos/Uno.jpg' %}" alt="..." />
+                                    <p>O Fiat Uno é um carro compacto e econômico, lançado pela Fiat na década de 1980 e amplamente popular no Brasil. Conhecido por sua praticidade, baixo custo de manutenção e consumo eficiente de combustível, o Uno foi projetado para ser um veículo acessível e durável para o dia a dia. Com um design simples e funcional, ele se destacou no mercado por seu espaço interno eficiente e fácil dirigibilidade, tornando-se um dos modelos mais queridos e vendidos ao longo de várias gerações.</p>
+                                    
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Solicitar Test-Drive
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Portfolio item 3 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="{% static 'assets/img/close-icon.svg' %}" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Toyota Corolla Hybrid</h2>
+                                    <p class="item-intro text-muted">2024</p>
+                                    <img class="img-fluid d-block mx-auto" src="{% static 'assets/veiculos/Corolla.png' %}" alt="..." />
+                                    <p>O Toyota Corolla Hybrid combina a confiabilidade clássica do Corolla com a tecnologia híbrida, oferecendo um sedã eficiente e ecologicamente responsável. Equipado com um motor a combustão e outro elétrico, ele proporciona excelente economia de combustível e menor emissão de poluentes. O Corolla Hybrid oferece conforto, bom espaço interno e uma experiência de direção silenciosa e suave, sendo uma opção popular para quem busca sustentabilidade sem abrir mão de desempenho e praticidade no dia a dia.</p>
+                                    
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Solicitar Test-Drive
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 4 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="{% static 'assets/img/close-icon.svg' %}" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Ford Fiesta</h2>
+                                    <p class="item-intro text-muted">2022</p>
+                                    <img class="img-fluid d-block mx-auto" src="{% static 'assets/veiculos/Fiesta.jpg' %}" alt="..." />
+                                    <p>O Ford Fiesta é um hatch compacto conhecido por sua dirigibilidade ágil, economia de combustível e estilo moderno. Ele é prático para a cidade, oferecendo um bom equilíbrio entre desempenho e conforto, além de ser fácil de manobrar e estacionar. Com várias opções de motorização ao longo dos anos, incluindo versões mais esportivas, o Fiesta conquistou um público jovem e urbano. Seu interior bem planejado e os recursos de tecnologia e segurança fazem dele uma escolha confiável e versátil para o dia a dia.</p>
+                                    
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Solicitar Test-Drive
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 5 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="{% static 'assets/img/close-icon.svg' %}" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Chevrolet Tracker</h2>
+                                    <p class="item-intro text-muted">2025</p>
+                                    <img class="img-fluid d-block mx-auto" src="{% static 'assets/veiculos/Tracker.jpg' %}" alt="..." />
+                                    <p>O Chevrolet Tracker é um SUV compacto que combina versatilidade urbana com características de um utilitário esportivo. Com um design moderno e robusto, ele oferece boa altura do solo, espaço interno confortável e tecnologias de conectividade e segurança. O Tracker é conhecido pela economia de combustível, especialmente nas versões com motorização turbo, e pelo bom desempenho em estradas e ambientes urbanos. É uma opção popular entre quem busca praticidade, conforto e estilo em um carro de perfil aventureiro.</p>
+                                    
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Solicitar Test-Drive
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio item 6 modal popup-->
+        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="{% static 'assets/img/close-icon.svg' %}" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Mitsubishi Lancer Evo</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                    <img class="img-fluid d-block mx-auto" src="{% static 'assets/veiculos/Lancer.jpg' %}" alt="..." />
+                                    <p>O Mitsubishi Lancer Evolution (ou Evo) é um icônico sedã esportivo japonês, famoso por sua performance e design agressivo. Equipado com tração integral e um motor turbo de quatro cilindros, o Evo é conhecido pela dirigibilidade excepcional e pelo desempenho tanto em pistas quanto em estradas. Amplamente admirado por entusiastas de rally, ele combina velocidade, estabilidade e controle avançado, destacando-se como um carro voltado para alta performance e com uma herança marcante no mundo automotivo.</p>
+                                    
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Solicitar Test-Drive
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}

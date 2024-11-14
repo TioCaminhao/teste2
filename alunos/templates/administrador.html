@@ -1,0 +1,120 @@
+{% extends 'base/base.html' %}
+{% block content %}
+<header class="masthead">
+    <div class="container">
+        <div class="masthead-subheading">Bem vindo(a), Adm!</div>
+        <div class="masthead-heading text-uppercase text-primary">Administração</div>
+    </div>
+</header>
+<body>
+    <div class="row">
+        <div>
+            <div class="card">
+                <!-- Tabela de Solicitações Pendentes -->
+                <div class="card-header">
+                    <h4 class="text-center text-primary">Solicitações Pendentes</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-md">
+                            <tr>
+                                <th>#</th>
+                                <th>Nome</th>
+                                <th>Email</th>
+                                <th>Número</th>
+                                <th>Serviço</th>
+                                <th>Detalhe</th>
+                                <th>Data Pedida</th>
+                                <th>Status</th>
+                                <th>Ação</th>
+                            </tr>
+                            {% for form in pendentes %}
+                            <tr>
+                                <td>{{ forloop.counter }}</td>
+                                <td>{{ form.nome }}</td>
+                                <td>{{ form.email }}</td>
+                                <td>{{ form.numero }}</td>
+                                <td>{{ form.servico }}</td>
+                                <td>{{ form.detalhes }}</td>
+                                <td>{{ form.data }}</td>
+                                <td>Pendente</td>
+                                <td class="center-block text-center">
+                                    <a href="{% url 'aceitar' form.id %}" class="btn btn-success">Aceitar</a>
+                                    <a href="{% url 'recusar' form.id %}" class="btn btn-danger">Recusar</a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Tabela de Solicitações Aceitas -->
+                <div class="card-header">
+                    <h4 class="text-center text-success">Solicitações Aceitas</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-md">
+                            <tr>
+                                <th>#</th>
+                                <th>Nome</th>
+                                <th>Email</th>
+                                <th>Número</th>
+                                <th>Serviço</th>
+                                <th>Detalhe</th>
+                                <th>Data Pedida</th>
+                                <th>Status</th>
+                            </tr>
+                            {% for form in aceitas %}
+                            <tr>
+                                <td>{{ forloop.counter }}</td>
+                                <td>{{ form.nome }}</td>
+                                <td>{{ form.email }}</td>
+                                <td>{{ form.numero }}</td>
+                                <td>{{ form.servico }}</td>
+                                <td>{{ form.detalhes }}</td>
+                                <td>{{ form.data }}</td>
+                                <td>Aceita</td>
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+              <div class="card-header">
+                <h4 class="text-center text-danger">Solicitações Recusadas</h4>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-md">
+                        <tr>
+                            <th>#</th>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Número</th>
+                            <th>Serviço</th>
+                            <th>Detalhe</th>
+                            <th>Data Pedida</th>
+                            <th>Status</th>
+                            <th>Motivo</th>
+                        </tr>
+                        {% for form in recusadas %}
+                        <tr>
+                            <td>{{ forloop.counter }}</td>
+                            <td>{{ form.nome }}</td>
+                            <td>{{ form.email }}</td>
+                            <td>{{ form.numero }}</td>
+                            <td>{{ form.servico }}</td>
+                            <td>{{ form.detalhes }}</td>
+                            <td>{{ form.data }}</td>
+                            <td>Recusada</td>
+                            <td></td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>          
+</body>
+{% endblock %}

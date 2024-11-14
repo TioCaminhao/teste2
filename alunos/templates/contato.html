@@ -1,0 +1,24 @@
+{% extends "base/nobase.html" %}
+{% block content %}
+<section id="contact">
+    <div class="container">
+        <div class="text-center">
+            <h1 class="section-heading text-uppercase text-primary">Agendar Serviço</h1>
+            <h3 class="section-subheading text-muted">Confire seus dados antes de agendar.</h3>
+        </div>
+        <!-- * * * * * * * * * * * * * * *-->
+        <!-- * * SB Forms Contact Form * *-->
+        <!-- * * * * * * * * * * * * * * *-->
+        <!-- This form is pre-integrated with SB Forms.-->
+        <!-- To make this form functional, sign up at-->
+        <!-- https://startbootstrap.com/solution/contact-forms-->
+        <!-- to get an API token!-->
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Agendar</button>
+            <a class="btn btn-primary" href="http://127.0.0.1:8000/">Voltar</a>
+        </form>
+    </div>
+</section>
+{% endblock %}
